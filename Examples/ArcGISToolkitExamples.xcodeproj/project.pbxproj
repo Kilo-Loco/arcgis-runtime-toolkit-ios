@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2140781E209B629000FBFDCC /* TimeSliderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2140781D209B629000FBFDCC /* TimeSliderExample.swift */; };
 		8800656E2228577A00F76945 /* TemplatePickerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8800656D2228577A00F76945 /* TemplatePickerExample.swift */; };
+		8814DE4E2280D6C400FC1808 /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883DBE742280D33F00B685A4 /* ArcGIS.framework */; };
+		8814DE4F2280D6C400FC1808 /* ArcGIS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 883DBE742280D33F00B685A4 /* ArcGIS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		883904441DF6022A001F3188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883904421DF6022A001F3188 /* Main.storyboard */; };
 		883904461DF6022A001F3188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883904451DF6022A001F3188 /* Assets.xcassets */; };
 		883904491DF6022A001F3188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883904471DF6022A001F3188 /* LaunchScreen.storyboard */; };
@@ -27,6 +29,76 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8814DE502280D6C400FC1808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 88D9705C1A3662560019D11D;
+			remoteInfo = ArcGIS;
+		};
+		883DBE6D2280D33F00B685A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B95FAE318D4F7F1003343FC;
+			remoteInfo = ArcGISRT;
+		};
+		883DBE6F2280D33F00B685A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8861AC3515335D3D003BE301;
+			remoteInfo = "ArcGISRT-mac64";
+		};
+		883DBE712280D33F00B685A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 21964ADD1BEAC99E0001075C;
+			remoteInfo = "ArcGISRT-tvOS";
+		};
+		883DBE732280D33F00B685A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88D9705D1A3662560019D11D;
+			remoteInfo = ArcGIS;
+		};
+		883DBE752280D33F00B685A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88B4ED171A366EBC00EB11E1;
+			remoteInfo = "ArcGIS-mac64";
+		};
+		883DBE772280D33F00B685A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88EEAB011A3A164800E5CC5F;
+			remoteInfo = ArcGIS.Bundle;
+		};
+		883DBE792280D33F00B685A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88EEA9481A3A071300E5CC5F;
+			remoteInfo = "ArcGIS.Bundle-mac64";
+		};
+		883DBE7B2280D33F00B685A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 217AB3E31BEC2B5F0027DA6F;
+			remoteInfo = "ArcGIS.Bundle-tvOS";
+		};
+		883DBE7F2280D37700B685A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 88D9705C1A3662560019D11D;
+			remoteInfo = ArcGIS;
+		};
 		88A01D7F1EA188EF00CD9621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88B6899F1E96E9AB00B67FAB /* ArcGISToolkit.xcodeproj */;
@@ -58,6 +130,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				88A01D7E1EA188EF00CD9621 /* ArcGISToolkit.framework in Embed Frameworks */,
+				8814DE4F2280D6C400FC1808 /* ArcGIS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +145,7 @@
 		883904451DF6022A001F3188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		883904481DF6022A001F3188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8839044A1DF6022A001F3188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ArcGISRT.xcodeproj; path = ../../../../../../Source/ArcGIS.quartz/Cocoa/API/Common/ArcGISRT.xcodeproj; sourceTree = "<group>"; };
 		883EA74A20741A56006D6F72 /* PopupExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupExample.swift; sourceTree = "<group>"; };
 		88B6899F1E96E9AB00B67FAB /* ArcGISToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ArcGISToolkit.xcodeproj; path = ../Toolkit/ArcGISToolkit.xcodeproj; sourceTree = "<group>"; };
 		88B689BE1E96EDF400B67FAB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8814DE4E2280D6C400FC1808 /* ArcGIS.framework in Frameworks */,
 				88A01D7D1EA188EF00CD9621 /* ArcGISToolkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,9 +175,11 @@
 		883904321DF6022A001F3188 = {
 			isa = PBXGroup;
 			children = (
+				883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */,
 				88B6899F1E96E9AB00B67FAB /* ArcGISToolkit.xcodeproj */,
 				8839043D1DF6022A001F3188 /* ArcGISToolkitExamples */,
 				8839043C1DF6022A001F3188 /* Products */,
+				883DBE7D2280D35400B685A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +204,28 @@
 				88B689D21E96EDFE00B67FAB /* Examples */,
 			);
 			path = ArcGISToolkitExamples;
+			sourceTree = "<group>";
+		};
+		883DBE5C2280D33E00B685A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				883DBE6E2280D33F00B685A4 /* libArcGIS.a */,
+				883DBE702280D33F00B685A4 /* libArcGIS.a */,
+				883DBE722280D33F00B685A4 /* libArcGIS.a */,
+				883DBE742280D33F00B685A4 /* ArcGIS.framework */,
+				883DBE762280D33F00B685A4 /* ArcGIS.framework */,
+				883DBE782280D33F00B685A4 /* ArcGIS.bundle */,
+				883DBE7A2280D33F00B685A4 /* ArcGIS.bundle */,
+				883DBE7C2280D33F00B685A4 /* ArcGIS.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		883DBE7D2280D35400B685A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		88B689A01E96E9AB00B67FAB /* Products */ = {
@@ -169,8 +268,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				883DBE802280D37700B685A4 /* PBXTargetDependency */,
 				88B689A61E96E9E000B67FAB /* PBXTargetDependency */,
 				88A01D801EA188EF00CD9621 /* PBXTargetDependency */,
+				8814DE512280D6C400FC1808 /* PBXTargetDependency */,
 			);
 			name = ArcGISToolkitExamples;
 			productName = ArcGISToolkitExamples;
@@ -189,6 +290,7 @@
 				TargetAttributes = {
 					8839043A1DF6022A001F3188 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = P8HGHS7JQ8;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -212,6 +314,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 883DBE5C2280D33E00B685A4 /* Products */;
+					ProjectRef = 883DBE5B2280D33E00B685A4 /* ArcGISRT.xcodeproj */;
+				},
+				{
 					ProductGroup = 88B689A01E96E9AB00B67FAB /* Products */;
 					ProjectRef = 88B6899F1E96E9AB00B67FAB /* ArcGISToolkit.xcodeproj */;
 				},
@@ -224,6 +330,62 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		883DBE6E2280D33F00B685A4 /* libArcGIS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libArcGIS.a;
+			remoteRef = 883DBE6D2280D33F00B685A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		883DBE702280D33F00B685A4 /* libArcGIS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libArcGIS.a;
+			remoteRef = 883DBE6F2280D33F00B685A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		883DBE722280D33F00B685A4 /* libArcGIS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libArcGIS.a;
+			remoteRef = 883DBE712280D33F00B685A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		883DBE742280D33F00B685A4 /* ArcGIS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ArcGIS.framework;
+			remoteRef = 883DBE732280D33F00B685A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		883DBE762280D33F00B685A4 /* ArcGIS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ArcGIS.framework;
+			remoteRef = 883DBE752280D33F00B685A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		883DBE782280D33F00B685A4 /* ArcGIS.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ArcGIS.bundle;
+			remoteRef = 883DBE772280D33F00B685A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		883DBE7A2280D33F00B685A4 /* ArcGIS.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ArcGIS.bundle;
+			remoteRef = 883DBE792280D33F00B685A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		883DBE7C2280D33F00B685A4 /* ArcGIS.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ArcGIS.bundle;
+			remoteRef = 883DBE7B2280D33F00B685A4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		88B689A41E96E9AC00B67FAB /* ArcGISToolkit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -258,7 +420,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/ArcGIS.framework/strip-frameworks.sh\"";
+			shellScript = "#bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/ArcGIS.framework/strip-frameworks.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -285,6 +447,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8814DE512280D6C400FC1808 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ArcGIS;
+			targetProxy = 8814DE502280D6C400FC1808 /* PBXContainerItemProxy */;
+		};
+		883DBE802280D37700B685A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ArcGIS;
+			targetProxy = 883DBE7F2280D37700B685A4 /* PBXContainerItemProxy */;
+		};
 		88A01D801EA188EF00CD9621 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ArcGISToolkit;
@@ -436,7 +608,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P8HGHS7JQ8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ArcGISToolkitExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -453,7 +625,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P8HGHS7JQ8;
 				INFOPLIST_FILE = ArcGISToolkitExamples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esri.${PRODUCT_NAME}";
