@@ -88,6 +88,7 @@ public class ArcGISARView: UIView {
         //
         // make our sceneView's background transparent
         sceneView.isBackgroundTransparent = true
+        sceneView.isManualRendering = true
         sceneView.atmosphereEffect = .none
 
         notifiedStartOrFailure = false
@@ -253,8 +254,9 @@ extension ArcGISARView: ARSessionDelegate {
      */
     public func session(_ session: ARSession, didUpdate frame: ARFrame) {
         // TODO: updateCamera().....
-        print("didUpdateFrame...")
+        //print("didUpdateFrame...")
         delegate?.session?(session, didUpdate: frame)
+        self.sceneView.renderFrame()
     }
     
     /**
