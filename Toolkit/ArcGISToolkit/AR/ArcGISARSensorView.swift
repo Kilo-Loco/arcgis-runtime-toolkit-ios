@@ -100,13 +100,6 @@ public class ArcGISARSensorView: UIView {
     required public convenience init(renderVideoFeed: Bool){
         self.init(frame: CGRect.zero)
         self.renderVideoFeed = renderVideoFeed
-        if renderVideoFeed {
-            // Set up the video preview view.
-            addSubviewWithConstraints(cameraView, index: 0)
-            cameraView.session = session
-            
-            prepVideoFeed()
-        }
     }
     
     private func sharedInitialization(){
@@ -118,6 +111,14 @@ public class ArcGISARSensorView: UIView {
 
         // add sceneView to our view
         addSubviewWithConstraints(sceneView)
+        
+        if renderVideoFeed {
+            // Set up the video preview view.
+            addSubviewWithConstraints(cameraView, index: 0)
+            cameraView.session = session
+            
+            prepVideoFeed()
+        }
     }
 
     public func startTracking() {
@@ -261,7 +262,7 @@ public class ArcGISARSensorView: UIView {
             let currentQuat = simd_quaternion(Float(quat.x), Float(quat.y), Float(quat.z), Float(quat.w))
             let finalQuat = simd_mul(currentQuat, orientationQuat)
             
-            print("updating device motion: \(finalQuat)")
+//            print("updating device motion: \(finalQuat)")
             //use `finalQuat` to update position/orientation of camera
         }
     }
@@ -473,7 +474,7 @@ extension ArcGISARSensorView: CLLocationManagerDelegate {
         
 //        finalizeStart()  // is this needed?
         
-        print("updating location: \(locationPoint)")
+//        print("updating location: \(locationPoint)")
     }
     
     /*

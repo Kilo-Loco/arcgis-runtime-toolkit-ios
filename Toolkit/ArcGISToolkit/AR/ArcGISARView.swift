@@ -56,6 +56,10 @@ public class ArcGISARView: UIView {
     // has the client been notfiied of start/failure
     private var notifiedStartOrFailure = false
     
+    // for calculating framerate
+    var frameCount:Int = 0
+    var frameCountTimer: Timer?
+    
     // MARK: Initializers
     
     public override init(frame: CGRect) {
@@ -88,9 +92,9 @@ public class ArcGISARView: UIView {
         //
         // make our sceneView's background transparent
         sceneView.isBackgroundTransparent = true
-        sceneView.isManualRendering = true
         sceneView.atmosphereEffect = .none
-
+        sceneView.isManualRendering = true
+        
         notifiedStartOrFailure = false
     }
 
@@ -138,11 +142,20 @@ public class ArcGISARView: UIView {
                 startWithAccessAuthorized()
             }
         }
+        
+        // reset frameCount and start timer to capture frame rate
+        frameCount = 0
+        frameCountTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] (timer) in
+            print("Frame rate = \(String(reflecting: self?.frameCount))")
+            self?.frameCount = 0
+        })
     }
 
     public func stopTracking() {
         arSCNView.session.pause()
         stopUpdatingLocationAndHeading()
+        
+        frameCountTimer?.invalidate()
     }
     
     // MARK: Private
@@ -254,9 +267,10 @@ extension ArcGISARView: ARSessionDelegate {
      */
     public func session(_ session: ARSession, didUpdate frame: ARFrame) {
         // TODO: updateCamera().....
-        //print("didUpdateFrame...")
+//        print("didUpdateFrame...")
         delegate?.session?(session, didUpdate: frame)
         self.sceneView.renderFrame()
+        frameCount = frameCount + 1
     }
     
     /**
