@@ -30,6 +30,11 @@ public class ArcGISARView: UIView {
     public var arConfiguration: ARConfiguration = {
         let config = ARWorldTrackingConfiguration()
         config.worldAlignment = .gravityAndHeading
+        if #available(iOS 11.3, *) {
+            config.planeDetection = [.horizontal, .vertical]
+        } else {
+            config.planeDetection = [.horizontal]
+        }
         return config
         }() {
         didSet {

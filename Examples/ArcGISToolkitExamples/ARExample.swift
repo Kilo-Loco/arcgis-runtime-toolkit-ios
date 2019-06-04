@@ -27,7 +27,8 @@ open class ARExample: UIViewController {
         // Example of how to get ARSessionDelegate methods from the ArcGISARView
         //
         arView.sessionDelegate = self
-
+        arView.scnSceneRendererDelegate = self
+        
         view.addSubview(arView)
         arView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -51,7 +52,8 @@ open class ARExample: UIViewController {
     private func scene() -> AGSScene {
 
         // create scene with the streets basemap
-        let scene = AGSScene(basemapType: .streets)
+//        let scene = AGSScene(basemapType: .streets)
+        let scene = AGSScene()
 
         // create elevation surface
         let elevationSource = AGSArcGISTiledElevationSource(url: URL(string: "http://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer")!)
@@ -60,6 +62,7 @@ open class ARExample: UIViewController {
         surface.name = "baseSurface"
         surface.isEnabled = true
         surface.backgroundGrid.isVisible = false
+        surface.navigationConstraint = .none
         scene.baseSurface = surface
         
         return scene
@@ -72,5 +75,50 @@ extension ARExample: ARSessionDelegate {
         //
         // Example of how to get ARSessionDelegate methods from the ArcGISARView
         //
+    }
+}
+
+extension ARExample: SCNSceneRendererDelegate {    
+
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        // Place content only for anchors found by plane detection.
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        
+        // Create a custom object to visualize the plane geometry and extent.
+        let plane = Plane(anchor: planeAnchor, in: arView.arSCNView)
+        
+        // Add the visualization to the ARKit-managed node so that it tracks
+        // changes in the plane anchor as plane estimation continues.
+        node.addChildNode(plane)
+    }
+
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        // Update only anchors and nodes set up by `renderer(_:didAdd:for:)`.
+        guard let planeAnchor = anchor as? ARPlaneAnchor,
+            let plane = node.childNodes.first as? Plane
+            else { return }
+        
+        // Update ARSCNPlaneGeometry to the anchor's new estimated shape.
+        if #available(iOS 12.0, *), let planeGeometry = plane.meshNode.geometry as? ARSCNPlaneGeometry {
+            planeGeometry.update(from: planeAnchor.geometry)
+        }
+        // Update extent visualization to the anchor's new bounding rectangle.
+        if let extentGeometry = plane.extentNode.geometry as? SCNPlane {
+            extentGeometry.width = CGFloat(planeAnchor.extent.x)
+            extentGeometry.height = CGFloat(planeAnchor.extent.z)
+            plane.extentNode.simdPosition = planeAnchor.center
+        }
+        
+        // Update the plane's classification and the text position
+        if #available(iOS 12.0, *),
+            let classificationNode = plane.classificationNode,
+            let classificationGeometry = classificationNode.geometry as? SCNText {
+            let currentClassification = planeAnchor.classification.description
+            if let oldClassification = classificationGeometry.string as? String, oldClassification != currentClassification {
+                classificationGeometry.string = currentClassification
+                classificationNode.centerAlign()
+            }
+        }
+        
     }
 }

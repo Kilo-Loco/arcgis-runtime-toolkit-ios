@@ -23,6 +23,8 @@
 		88B689CE1E96EDF400B67FAB /* ScalebarExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B689C41E96EDF400B67FAB /* ScalebarExample.swift */; };
 		88B689D11E96EDF400B67FAB /* VCListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B689C71E96EDF400B67FAB /* VCListViewController.swift */; };
 		88DBC2A11FE83D6000255921 /* JobManagerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DBC2A01FE83D6000255921 /* JobManagerExample.swift */; };
+		E43B4E1422A5BD460080ED3A /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43B4E1322A5BD460080ED3A /* Plane.swift */; };
+		E43B4E1622A5BE580080ED3A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43B4E1522A5BE580080ED3A /* Utilities.swift */; };
 		E447A12B2267BB9500578C0B /* ARExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E447A12A2267BB9500578C0B /* ARExample.swift */; };
 		E46893271FEDAE29008ADA79 /* CompassExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46893261FEDAE29008ADA79 /* CompassExample.swift */; };
 		E48405751E9BE7E600927208 /* LegendExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48405741E9BE7E600927208 /* LegendExample.swift */; };
@@ -84,6 +86,8 @@
 		88B689C41E96EDF400B67FAB /* ScalebarExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalebarExample.swift; sourceTree = "<group>"; };
 		88B689C71E96EDF400B67FAB /* VCListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCListViewController.swift; sourceTree = "<group>"; };
 		88DBC2A01FE83D6000255921 /* JobManagerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobManagerExample.swift; sourceTree = "<group>"; };
+		E43B4E1322A5BD460080ED3A /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		E43B4E1522A5BE580080ED3A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E447A12A2267BB9500578C0B /* ARExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARExample.swift; sourceTree = "<group>"; };
 		E46893261FEDAE29008ADA79 /* CompassExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassExample.swift; sourceTree = "<group>"; };
 		E48405741E9BE7E600927208 /* LegendExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegendExample.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 				88B689BF1E96EDF400B67FAB /* ExamplesViewController.swift */,
 				88B689C71E96EDF400B67FAB /* VCListViewController.swift */,
 				88B689D21E96EDFE00B67FAB /* Examples */,
+				E43B4E1222A5BD270080ED3A /* Misc */,
 			);
 			path = ArcGISToolkitExamples;
 			sourceTree = "<group>";
@@ -157,6 +162,15 @@
 				E447A12A2267BB9500578C0B /* ARExample.swift */,
 			);
 			name = Examples;
+			sourceTree = "<group>";
+		};
+		E43B4E1222A5BD270080ED3A /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				E43B4E1522A5BE580080ED3A /* Utilities.swift */,
+				E43B4E1322A5BD460080ED3A /* Plane.swift */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +209,7 @@
 				TargetAttributes = {
 					8839043A1DF6022A001F3188 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = P8HGHS7JQ8;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -275,7 +290,9 @@
 			files = (
 				883EA74B20741A56006D6F72 /* PopupExample.swift in Sources */,
 				88B689C81E96EDF400B67FAB /* AppDelegate.swift in Sources */,
+				E43B4E1622A5BE580080ED3A /* Utilities.swift in Sources */,
 				2140781E209B629000FBFDCC /* TimeSliderExample.swift in Sources */,
+				E43B4E1422A5BD460080ED3A /* Plane.swift in Sources */,
 				88B689CB1E96EDF400B67FAB /* MeasureExample.swift in Sources */,
 				88DBC2A11FE83D6000255921 /* JobManagerExample.swift in Sources */,
 				88B689D11E96EDF400B67FAB /* VCListViewController.swift in Sources */,
@@ -442,7 +459,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P8HGHS7JQ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS/Frameworks/Dynamic",
@@ -462,7 +479,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P8HGHS7JQ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS/Frameworks/Dynamic",
